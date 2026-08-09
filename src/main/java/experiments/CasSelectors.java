@@ -75,7 +75,8 @@ public class CasSelectors {
         driver.quit();
     }
 
-    public void pause(int time){
+    public void pause(int time)
+    {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
