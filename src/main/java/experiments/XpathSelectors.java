@@ -8,12 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class XpathSelectors
-{
+public class XpathSelectors {
     WebDriver driver = new ChromeDriver();
+
     @Test
-    public void xpathSelectorsTest()
-    {
+    public void xpathSelectorsTest() {
         driver.get("https://demoqa.com");
         driver.manage().window().maximize();
         pause(3000);
@@ -67,8 +66,7 @@ public class XpathSelectors
 
     }
 
-    public void pause(int time)
-    {
+    public void pause(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
@@ -76,8 +74,7 @@ public class XpathSelectors
         }
     }
 
-    public void hideFooter()
-    {
+    public void hideFooter() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.querySelector('footer').style.display='none'");
 

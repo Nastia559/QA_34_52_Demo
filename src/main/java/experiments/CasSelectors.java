@@ -14,7 +14,7 @@ public class CasSelectors {
     WebDriver driver = new ChromeDriver();
 
     @Test
-    public void selectorsHomePage(){
+    public void selectorsHomePage() {
         driver.get("https://demoqa.com/");
         driver.manage().window().maximize();
         pause(3000);
@@ -75,8 +75,7 @@ public class CasSelectors {
         driver.quit();
     }
 
-    public void pause(int time)
-    {
+    public void pause(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
@@ -84,23 +83,19 @@ public class CasSelectors {
         }
     }
 
-    public void scrollActions()
-    {
+    public void scrollActions() {
         Actions actions = new Actions(driver);
-        for(int i = 0; i < 5; i++)
-        {
+        for (int i = 0; i < 5; i++) {
             actions.scrollByAmount(0, 700).perform();
             try {
                 Thread.sleep(500);
-            } catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
     }
 
-    public void hideFooter()
-    {
+    public void hideFooter() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("document.querySelector('footer').style.display='none'");
 

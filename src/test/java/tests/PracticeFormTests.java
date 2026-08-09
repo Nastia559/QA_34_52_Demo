@@ -9,8 +9,7 @@ import pages.PracticeFormPage;
 
 public class PracticeFormTests extends AppManager {
     @Test
-    public void practiceFormPositiveTest()
-    {
+    public void practiceFormPositiveTest() {
         Student student = Student.builder()
                 .firstName("John")
                 .lastName("Doe")
@@ -27,7 +26,7 @@ public class PracticeFormTests extends AppManager {
 //        HomePage homePage= new HomePage(getDriver());
 //        homePage.clickBtnForms();
         new HomePage(getDriver()).clickBtnForms();
-        new FormsPage( getDriver()).clickBtnPracticeForms();
+        new FormsPage(getDriver()).clickBtnPracticeForms();
         PracticeFormPage practiceFormPage =
                 new PracticeFormPage(getDriver());
         practiceFormPage.typePracticeForm(student);
