@@ -26,7 +26,7 @@ public class PracticeFormTests extends AppManager {
                 .mobile("0123456789")
                 .dateOfBirth("22 April 1987")
                 .subjects("Math,Chemistry,English")
-                .hobbies("sport")
+                .hobbies(hobbies)
                 .picture("")
                 .address("Street 1")
                 .state("NCR")
@@ -39,7 +39,6 @@ public class PracticeFormTests extends AppManager {
         PracticeFormPage practiceFormPage =
                 new PracticeFormPage(getDriver());
         practiceFormPage.typePracticeForm(student);
-
 
     }
 }
