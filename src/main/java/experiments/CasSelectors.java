@@ -85,8 +85,8 @@ public class CasSelectors {
 
     public void scrollActions() {
         Actions actions = new Actions(driver);
-        for (int i = 0; i < 5; i++) {
-            actions.scrollByAmount(0, 700).perform();
+        for (int i = 0; i < 10; i++) {
+            actions.scrollByAmount(0, 500).perform();
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
